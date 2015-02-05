@@ -9,8 +9,8 @@ class Player
 	#this section will control the movement between rooms
 	def enter(room) #we will pass each room from the array
 		#evlaute if an enemy is in the room. and run the fight class
-		if room.has_enemy == true #(techically the ==true is not needed. I like it to make it clear.)
-			fight = Fight.new(self,room.enemy) #player passes itself into the method to be used.
+		if room.has_enemy 
+			fight = Fight.new(self,room.enemy,room.has_enemy) #player passes itself into the method to be used.
 			fight.attack
 		end
 		#decide which way to go
@@ -20,7 +20,7 @@ class Player
 		direction = gets.chomp.to_sym #must convert this to a symbol, since we used a symbol in the hash in the room class
 		until room.walls[direction] == "open" do
 			puts "You stumble around in the dark. Choose a new direction"
-			direction = gets.chomp
+			direction = gets.chomp.to_sym
 		end
 			puts "You go to the next room!"
 			#add movement into the next room array
