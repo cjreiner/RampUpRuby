@@ -78,7 +78,7 @@ rooms.each do |room|
 end
 #=end
 
-
+#this code is to test the Fight class
 #room = Room.new
 #fight = Fight.new(player1,room.enemy,room.has_enemy) #player passes itself into the method to be used.
 #fight.attack
