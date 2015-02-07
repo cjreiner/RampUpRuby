@@ -1,0 +1,6 @@
+Chris
+Director of Marketing Analytics
+I love soccer
+If I could build any app I wanted with Ruby, I would build a
+website that updated soccer scores in Realtime for only the games
+I want to track.
